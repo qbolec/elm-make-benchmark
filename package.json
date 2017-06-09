@@ -4,7 +4,7 @@
   "scripts": {
     "elmInstall": "elm-package install --yes",
     "elmCompile": "elm-make ./elm/src/Main.elm --output ./bundle.js",
-    "clean": "rm -rf ./elm/src",
+    "clean": "rm -rf ./elm/src && rm -rf ./elm-stuff/build-artifacts/0.16.0/durkiewicz/",
     "start": "./index.js"
   },
   "devDependencies": {

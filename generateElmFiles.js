@@ -3,7 +3,7 @@ const {
     nodeModule,
     leafModule,
     mainModule
-} = require('./templates/concatenatingStrings');
+} = require('./templates/caseOf');
 
 function numberToModuleName(n) {
     return n
