@@ -1,0 +1,15 @@
+{
+  "name": "elm-make-benchmark",
+  "version": "0.0.1",
+  "scripts": {
+    "elmInstall": "elm-package install --yes",
+    "elmCompile": "elm-make ./elm/src/Main.elm --output ./bundle.js",
+    "clean": "rm -rf ./elm/src",
+    "start": "./index.js"
+  },
+  "devDependencies": {
+    "fs-extra": "^1.0.0",
+    "elm": "0.16.0",
+    "lodash": "^4.16.6"
+  }
+}

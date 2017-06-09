@@ -1,0 +1,5 @@
+/.idea
+/node_modules
+/elm-stuff
+/elm/src
+bundle.js
