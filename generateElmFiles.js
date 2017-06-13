@@ -3,7 +3,7 @@ const {
     nodeModule,
     leafModule,
     mainModule
-} = require('./templates/caseOf');
+} = require('./templates/teaTemplate');
 
 function numberToModuleName(n) {
     return n
