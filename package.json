@@ -5,7 +5,8 @@
     "elmInstall": "elm-package install --yes",
     "elmCompile": "elm-make ./elm/src/Main.elm --output ./bundle.js",
     "clean": "rm -rf ./elm/src && rm -rf ./elm-stuff/build-artifacts/0.16.0/durkiewicz/",
-    "start": "./index.js"
+    "start": "./index.js",
+    "measure": "npm run clean && npm run start -- $DEPTH $TEMPLATE && time -p npm run elmCompile"
   },
   "devDependencies": {
     "fs-extra": "^1.0.0",

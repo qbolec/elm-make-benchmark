@@ -1,9 +1,5 @@
 const _ = require('lodash');
-const {
-    nodeModule,
-    leafModule,
-    mainModule
-} = require('./templates/teaTemplate');
+
 
 function numberToModuleName(n) {
     return n
@@ -31,7 +27,16 @@ function modulesAtLevel(l) {
         .concat(modulesWithLeadingB(l).map(swapAsAndBs));
 }
 
-module.exports = function generateElmFiles(depth) {
+module.exports = function generateElmFiles(depth, templateName) {
+    if(!['teaTemplate','caseOf','concatenatingStrings'].includes(templateName)){
+        throw new Error(`Unknown template ${templateName}`);
+    }
+    const {
+        nodeModule,
+        leafModule,
+        mainModule
+    } = require(`./templates/${templateName}`);
+
     const nodeModules = _.flatMap(_.range(1, depth), modulesAtLevel)
         .map(name => ({
             relativePath: name + '.elm',
